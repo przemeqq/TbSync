@@ -304,6 +304,14 @@ parent/ext-calendar-timezones.js, respectively.
     Unit regressions: calendar-clear.test.mjs and
     calendar-timezone-observer.test.mjs.
 
+    Rechecked against Thunderbird 159.0 (build 20261026161902): storage
+    deletion still returns a promise and clears the item and metadata
+    models; defaultTimezoneChanged still follows the cached timezone update.
+    The provider registration and cached-calendar APIs used here remain
+    available. The two regression tests pass on this source tree. Runtime
+    checks in an account-free offline profile are separate from server
+    synchronization tests.
+
 For items 0-9, verified against Thunderbird 153.0.2 (esr153), 154.0 (beta) and 155.0a1:
 every other member these files touch - defaultTimezone, timezoneIds and
 calITimezoneDatabase.getTimezoneDefinition - is present unchanged in all
